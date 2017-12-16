@@ -26,8 +26,11 @@ class Upload(tornado.web.RequestHandler):
 
         result=dirty_percentage("uploads/"+cname)
         self.add_header("Access-Control-Allow-Origin", "*")
-        self.render("result.html", result = result)
+        if(float(result)<25.00000000):
+            self.render("result.html", result = result)
 
+        else:
+            self.render("result2.html", result = result)
 
 
 application = tornado.web.Application([
@@ -42,5 +45,5 @@ if __name__ == "__main__":
     http_server = tornado.httpserver.HTTPServer(application)
     port = int(os.environ.get("PORT", 5000))
     http_server.listen(port)
-
+    print "Server running on Localhost:", port
     tornado.ioloop.IOLoop.instance().start()

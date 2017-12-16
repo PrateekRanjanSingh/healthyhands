@@ -5,11 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 	<style type="text/css">
 		html, body {
 		    height:100%;
-		}
+		} 
+
 		body {
 		    background-color: white;
 		    background-image: url('bg2.jpg');
@@ -20,15 +22,14 @@
 			font-size: 20px;
 		}
 	</style>
-	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 </head>
 <body>
 	<div class="container">
-		<img src="https://www.smileysapp.com/gif-emoji/thumbs-up.gif">
+		<img src="https://www.smileysapp.com/gif-emoji/thumbs-down.gif">
 		<!-- {{ result }}  -->
-		Your germ percentage is : {{ result }} <br>
-		You are all clear to fill in your tummy
-
+		<center>
+			<p>Your Germ percentage is: {{ result }}<br>Go wash your hands</p>
+		</center>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
